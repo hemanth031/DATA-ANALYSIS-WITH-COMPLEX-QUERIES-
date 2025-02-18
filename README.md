@@ -18,4 +18,8 @@ Subqueries are another essential feature in SQL that enable the execution of nes
 Common Table Expressions (CTEs) provide an elegant way to write and manage complex queries by improving readability and performance. CTEs allow temporary result sets to be referenced multiple times within a query. Unlike subqueries, which can become difficult to read when nested deeply, CTEs simplify query structure, making it easier to debug and maintain. For example, a financial analyst can use a recursive CTE to analyze hierarchical data such as company organizational structures or customer referral networks.
 Another advanced SQL feature used in data analysis is window functions. These functions perform calculations across a specific range of rows related to the current row, without collapsing them into a single aggregate result. Unlike traditional aggregate functions (such as SUM, COUNT, AVG), window functions like ROW_NUMBER(), RANK(), DENSE_RANK(), and LAG() allow analysts to analyze trends and rankings within datasets. A common use case is identifying the top-selling products in each category while retaining details of all transactions.
 
+##OUTPUT
 
+![Image](https://github.com/user-attachments/assets/730b482a-142c-42e0-ba3c-8b2da7da2c00)
+![Image](https://github.com/user-attachments/assets/113f98d4-b03e-44f6-b2c9-d77ac0450e3e)
+![Image](https://github.com/user-attachments/assets/2f32799d-2bcc-4117-a57f-971b7f582b97)
