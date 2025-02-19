@@ -1,0 +1,35 @@
+TASK 2 
+DATA ANALYSIS WITH COMPLEX QUERIES  
+Tables: 
+1.customers 
+customer_id (INT, Primary Key) 
+name (VARCHAR) 
+region (VARCHAR) 
+signup_date (DATE) 
+
+2. products 
+product_id (INT, Primary Key) 
+product_name (VARCHAR) 
+category (VARCHAR) 
+price (DECIMAL) 
+
+3. sales 
+sale_id (INT, Primary Key) 
+customer_id (INT, Foreign Key) 
+product_id (INT, Foreign Key) 
+quantity (INT) 
+sale_date (DATE) 
+total_amount (DECIMAL) 
+
+EXAMPLES 
+1. Top 5 Customers with Highest Total Spending 
+CODE: SELECT customer_id, name, total_spent 
+FROM ( 
+SELECT c.customer_id, c.name, SUM(s.total_amount) AS total_spent 
+FROM customers c 
+JOIN sales s ON c.customer_id = s.customer_id 
+GROUP BY c.customer_id, c.name 
+) customer_spending 
+ORDER BY total_spent DESC 
+LIMIT 5; 
+
